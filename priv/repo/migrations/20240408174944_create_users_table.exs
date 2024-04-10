@@ -5,6 +5,7 @@ defmodule CreditCardLedger.Repo.Migrations.CreateUsersTable do
     create table(:users, primary_key: false) do
       add :id, :uuid, primary_key: true
       add :full_name, :string, null: false
+      add :credit_limit, :float
       add :inserted_at, :naive_datetime, default: fragment("now()")
 
     end
